@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
@@ -13,7 +14,7 @@ app.use(express.json());
 // MongoDB connection 
 const connectDB = async () => {
   try {
-    const mongoURI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/fruitai'; // Fallback to local MongoDB if no environment variable
+    const mongoURI = process.env.MONGO_URI  
     const conn = await mongoose.connect(mongoURI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
@@ -55,10 +56,13 @@ app.post('/api/translate', (req, res) => {
 });
 // Root route
 app.get('/', (req, res) => {
-  res.send('API is running...');
+  res.send({
+    activeStatus:true,
+    error:false,
+  });
 });
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT;
 
 // Start the server
 app.listen(PORT, () => {
