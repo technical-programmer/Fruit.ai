@@ -1,0 +1,194 @@
+/* Container for the entire FAQ page */
+.faq-container {
+    padding: 20px;
+    background: linear-gradient(135deg, #7B87F1, #4AC0FF); /* Background with gradient */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Title styling */
+  .faq-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Toggle button for the form */
+  .btn-toggle-form {
+    background-color: #fff;
+    color: #4AC0FF;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-toggle-form:hover {
+    background-color: #00bfff;
+    color: #fff;
+  }
+  
+  /* Add FAQ form */
+  .add-faq-form {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .add-faq-form input, .add-faq-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+  }
+  
+  .add-faq-form button {
+    background-color: #00bfff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-faq-form button:hover {
+    background-color: #009fdb;
+  }
+  
+  /* FAQ card container */
+  .faq-list {
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  /* Individual FAQ card */
+  .faq-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .faq-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* FAQ header */
+  .faq-header {
+    background-color: #4AC0FF;
+    color: #fff;
+    padding: 15px 20px;
+    font-size: 1.25rem;
+  }
+  
+  /* FAQ content (visible by default) */
+  .faq-content {
+    padding: 15px 20px;
+    display: block; /* Ensure the content is always displayed */
+  }
+  
+  .faq-content p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .faq-content button {
+    background-color: #ff4d4d;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .faq-content button:hover {
+    background-color: #ff1a1a;
+  }
+  
+  /* No FAQs available text */
+  .no-faqs {
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+  }
+  
+  /* Media Queries for Mobile */
+  @media (max-width: 768px) {
+    /* Adjusting title size for smaller screens */
+    .faq-title {
+      font-size: 2rem;
+    }
+  
+    /* Ensuring form fits smaller screens */
+    .add-faq-form {
+      max-width: 100%;
+      padding: 15px;
+    }
+  
+    /* Ensuring FAQ list and cards fit smaller screens */
+    .faq-list {
+      max-width: 100%;
+    }
+  
+    .faq-header {
+      padding: 10px;
+      font-size: 1rem;
+    }
+  
+    /* Adjusting card hover effects for touch devices */
+    .faq-card:hover {
+      transform: none;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  /* Media Queries for smaller mobile devices (up to 480px) */
+  @media (max-width: 480px) {
+    /* Slight reduction in title size */
+    .faq-title {
+      font-size: 1.8rem;
+    }
+  
+    /* Ensuring buttons and inputs are still clickable on small screens */
+    .btn-toggle-form {
+      padding: 8px 16px;
+      font-size: 0.9rem;
+    }
+  
+    .add-faq-form input, .add-faq-form textarea {
+      padding: 8px;
+    }
+  
+    /* Adjust padding inside FAQ cards */
+    .faq-header, .faq-content {
+      padding: 10px;
+    }
+  
+    .faq-header {
+      font-size: 0.95rem;
+    }
+  }
+  
